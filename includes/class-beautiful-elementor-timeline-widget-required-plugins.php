@@ -80,7 +80,7 @@ if ( ! class_exists( 'Beautiful_Elementor_Timeline_Widget_Required_Plugins' ) ) 
 		 *
 		 * @since 1.0.0
 		 *
-		 * @var TGM_Plugin_Activation
+		 * @var Beautiful_Elementor_Timeline_Widget_Required_Plugins
 		 */
 		public static $instance;
 
@@ -250,7 +250,7 @@ if ( ! class_exists( 'Beautiful_Elementor_Timeline_Widget_Required_Plugins' ) ) 
 		 *
 		 * @since 1.0.0
 		 *
-		 * @see TGM_Plugin_Activation::init()
+		 * @see Beautiful_Elementor_Timeline_Widget_Required_Plugins::init()
 		 */
 		public function __construct() {
 			// Set the current WordPress version.
@@ -311,9 +311,9 @@ if ( ! class_exists( 'Beautiful_Elementor_Timeline_Widget_Required_Plugins' ) ) 
 		 *
 		 * @since 2.0.0
 		 *
-		 * @see TGM_Plugin_Activation::admin_menu()
-		 * @see TGM_Plugin_Activation::notices()
-		 * @see TGM_Plugin_Activation::styles()
+		 * @see Beautiful_Elementor_Timeline_Widget_Required_Plugins::admin_menu()
+		 * @see Beautiful_Elementor_Timeline_Widget_Required_Plugins::notices()
+		 * @see Beautiful_Elementor_Timeline_Widget_Required_Plugins::styles()
 		 */
 		public function init() {
 			/**
@@ -684,8 +684,8 @@ if ( ! class_exists( 'Beautiful_Elementor_Timeline_Widget_Required_Plugins' ) ) 
 		 *
 		 * @since 1.0.0
 		 *
-		 * @see TGM_Plugin_Activation::init()
-		 * @see TGM_Plugin_Activation::install_plugins_page()
+		 * @see Beautiful_Elementor_Timeline_Widget_Required_Plugins::init()
+		 * @see Beautiful_Elementor_Timeline_Widget_Required_Plugins::install_plugins_page()
 		 *
 		 * @return null Return early if user lacks capability to install a plugin.
 		 */
@@ -2084,7 +2084,7 @@ if ( ! class_exists( 'Beautiful_Elementor_Timeline_Widget_Required_Plugins' ) ) 
 		 *
 		 * @since 2.4.0
 		 *
-		 * @return \TGM_Plugin_Activation The TGM_Plugin_Activation object.
+		 * @return \Beautiful_Elementor_Timeline_Widget_Required_Plugins The Beautiful_Elementor_Timeline_Widget_Required_Plugins object.
 		 */
 		public static function get_instance() {
 			if ( ! isset( self::$instance ) && ! ( self::$instance instanceof self ) ) {
@@ -2095,21 +2095,21 @@ if ( ! class_exists( 'Beautiful_Elementor_Timeline_Widget_Required_Plugins' ) ) 
 		}
 	}
 
-	if ( ! function_exists( 'load_tgm_plugin_activation' ) ) {
+	if ( ! function_exists( 'load_Beautiful_Elementor_Timeline_Widget_Required_Plugins' ) ) {
 		/**
 		 * Ensure only one instance of the class is ever invoked.
 		 *
 		 * @since 2.5.0
 		 */
-		function load_tgm_plugin_activation() {
-			$GLOBALS['tgmpa'] = TGM_Plugin_Activation::get_instance();
+		function load_Beautiful_Elementor_Timeline_Widget_Required_Plugins() {
+			$GLOBALS['tgmpa'] = Beautiful_Elementor_Timeline_Widget_Required_Plugins::get_instance();
 		}
 	}
 
 	if ( did_action( 'plugins_loaded' ) ) {
-		load_tgm_plugin_activation();
+		load_Beautiful_Elementor_Timeline_Widget_Required_Plugins();
 	} else {
-		add_action( 'plugins_loaded', 'load_tgm_plugin_activation' );
+		add_action( 'plugins_loaded', 'load_Beautiful_Elementor_Timeline_Widget_Required_Plugins' );
 	}
 }
 
@@ -3091,15 +3091,15 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 		 * Retrieve plugin data, given the plugin name.
 		 *
 		 * @since      2.2.0
-		 * @deprecated 2.5.0 use {@see TGM_Plugin_Activation::_get_plugin_data_from_name()} instead.
-		 * @see        TGM_Plugin_Activation::_get_plugin_data_from_name()
+		 * @deprecated 2.5.0 use {@see Beautiful_Elementor_Timeline_Widget_Required_Plugins::_get_plugin_data_from_name()} instead.
+		 * @see        Beautiful_Elementor_Timeline_Widget_Required_Plugins::_get_plugin_data_from_name()
 		 *
 		 * @param string $name Name of the plugin, as it was registered.
 		 * @param string $data Optional. Array key of plugin data to return. Default is slug.
 		 * @return string|boolean Plugin slug if found, false otherwise.
 		 */
 		protected function _get_plugin_data_from_name( $name, $data = 'slug' ) {
-			_deprecated_function( __FUNCTION__, 'TGMPA 2.5.0', 'TGM_Plugin_Activation::_get_plugin_data_from_name()' );
+			_deprecated_function( __FUNCTION__, 'TGMPA 2.5.0', 'Beautiful_Elementor_Timeline_Widget_Required_Plugins::_get_plugin_data_from_name()' );
 
 			return $this->tgmpa->_get_plugin_data_from_name( $name, $data );
 		}
