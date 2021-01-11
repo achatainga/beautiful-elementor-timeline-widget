@@ -89,22 +89,14 @@ function beautiful_elementor_timeline_widget_register_required_plugins() {
 	 * If the source is NOT from the .org repo, then source is also required.
 	 */
 	$plugins = array(
-		// This is an example of how to include a plugin from the WordPress Plugin Repository.
-		array(
-			'name'      => 'BuddyPress',
-			'slug'      => 'buddypress',
-			'required'  => false,
-		),
-
-		// This is an example of the use of 'is_callable' functionality. A user could - for instance -
-		// have WPSEO installed *or* WPSEO Premium. The slug would in that last case be different, i.e.
-		// 'wordpress-seo-premium'.
-		// By setting 'is_callable' to either a function from that plugin or a class method
-		// `array( 'class', 'method' )` similar to how you hook in to actions and filters, TGMPA can still
-		// recognize the plugin as being installed.
 		array(
 			'name'        => 'SCSS-Library',
 			'slug'        => 'scss-library',
+			'is_callable' => 'wpseo_init',
+		),
+		array(
+			'name'        => 'Elementor',
+			'slug'        => 'elementor',
 			'is_callable' => 'wpseo_init',
 		),
 
