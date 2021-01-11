@@ -52,7 +52,7 @@ class Beautiful_Elementor_Timeline_Widget_Admin {
 		$this->plugin_name = $plugin_name;
 		$this->version = $version;
 
-		require_once( plugin_dir_path( __FILE__ ) . 'class-beautiful-elementor-widget-element.php' );
+		require_once( plugin_dir_path( __FILE__ ) . 'class-beautiful-elementor-timeline-widget-element.php' );
 		add_action( 'elementor/widgets/widget_registered', array( $this, 'register_widgets' ) );
 
 	}
