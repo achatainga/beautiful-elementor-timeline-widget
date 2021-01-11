@@ -110,11 +110,6 @@ class Beautiful_Elementor_Timeline_Widget {
 		 * of the plugin.
 		 */
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-beautiful-elementor-timeline-widget-i18n.php';
-
-		/**
-		 * The class responsible for defining the Elementor Widget.
-		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-beautiful-elementor-timeline-widget-element.php';
 		
 		/**
 		 * The class responsible for defining all actions that occur in the admin area.
@@ -161,7 +156,6 @@ class Beautiful_Elementor_Timeline_Widget {
 
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
-		$this->loader->add_action( 'elementor/widgets/widgets_registered', $plugin_admin, 'register_widgets' );
 
 	}
 

@@ -113,3 +113,5 @@ function beautiful_elementor_timeline_widget_register_required_plugins() {
 
 	tgmpa( $plugins, $config );
 }
+
+require_once plugin_dir_path( __FILE__ ) . 'admin/class-beautiful-elementor-timeline-widget-register-elements.php';
