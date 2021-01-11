@@ -112,6 +112,11 @@ class Beautiful_Elementor_Timeline_Widget {
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-beautiful-elementor-timeline-widget-i18n.php';
 
 		/**
+		 * The class responsible for defining the Elementor Widget.
+		 */
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-beautiful-elementor-timeline-widget-element.php';
+		
+		/**
 		 * The class responsible for defining all actions that occur in the admin area.
 		 */
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-beautiful-elementor-timeline-widget-admin.php';
