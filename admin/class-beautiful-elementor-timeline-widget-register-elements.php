@@ -17,7 +17,7 @@ class Beautiful_Elementor_Timeline_Widget_Register_elements {
 
     public function register_widgets() {
         require_once plugin_dir_path( __FILE__ ) . 'class-beautiful-elementor-timeline-widget-element.php';
-        \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Elementor\Beautiful_Elementor_Timeline_Widget_Element() );
+        \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Beautiful_Elementor_Timeline_Widget_Element() );
     }
 }
 
