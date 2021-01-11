@@ -15,7 +15,7 @@
  * @wordpress-plugin
  * Plugin Name:       Beautiful Elementor Timeline Widget
  * Plugin URI:        https://github.com/achatainga/beautiful-elementor-timeline-widget
- * Description:       This is a short description of what the plugin does. It's displayed in the WordPress admin area.
+ * Description:       This is a custom beautiful elementor timeline widget plugin designed to be displayed beautifully on your site
  * Version:           1.0.0
  * Author:            Alejandro Chataing
  * Author URI:        https://github.com/achatainga
