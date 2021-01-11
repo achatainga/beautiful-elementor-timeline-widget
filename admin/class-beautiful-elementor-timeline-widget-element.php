@@ -6,8 +6,8 @@
  *
  * @since 1.0.0
  */
-namespace Elementor;
-class Beautiful_Elementor_Timeline_Widget_Element extends Widget_Base {
+
+class Beautiful_Elementor_Timeline_Widget_Element extends \Elementor\Widget_Base {
 
 	/**
 	 * Get widget name.
