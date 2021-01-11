@@ -13,7 +13,7 @@ class Beautiful_Elementor_Timeline_Widget_Register_elements {
 
     protected function __construct() {
         require_once plugin_dir_path( __FILE__ ) . 'class-beautiful-elementor-timeline-widget-element.php';
-        add_action( 'elementor/widgets/widget_registered', [ $this, 'register_widgets' ] );
+        add_action( 'elementor/widgets/widgets_registered', [ $this, 'register_widgets' ] );
     }
 
     public function register_widgets() {
