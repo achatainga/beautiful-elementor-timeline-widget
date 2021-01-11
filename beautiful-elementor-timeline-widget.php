@@ -81,7 +81,7 @@ function run_beautiful_elementor_timeline_widget() {
 }
 run_beautiful_elementor_timeline_widget();
 
-require_once dirname( __FILE__ ) . '/includes/class-tgm-plugin-activation.php';
+require_once plugin_dir_path( __FILE__ ) . 'includes/class-tgm-plugin-activation.php';
 add_action( 'tgmpa_register', 'beautiful_elementor_timeline_widget_register_required_plugins' );
 function beautiful_elementor_timeline_widget_register_required_plugins() {
 	$plugins = array(

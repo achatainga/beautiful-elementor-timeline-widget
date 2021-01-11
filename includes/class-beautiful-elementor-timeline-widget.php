@@ -161,6 +161,7 @@ class Beautiful_Elementor_Timeline_Widget {
 
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
+		$this->loader->add_action( 'elementor/widgets/widgets_registered', $plugin_admin, 'register_widgets' );
 
 	}
 
