@@ -84,12 +84,11 @@ class Beautiful_Elementor_Timeline_Widget_Element extends \Elementor\Widget_Base
 		);
 
 		$this->add_control(
-			'url',
+			'gallery',
 			[
-				'label' => __( 'URL to embed', 'plugin-name' ),
-				'type' => \Elementor\Controls_Manager::TEXT,
-				'input_type' => 'url',
-				'placeholder' => __( 'https://your-link.com', 'plugin-name' ),
+				'label' => __( 'Add 4 images', 'plugin-name' ),
+				'type' => \Elementor\Controls_Manager::GALLERY,
+                'default' => [],
 			]
 		);
 
@@ -107,35 +106,25 @@ class Beautiful_Elementor_Timeline_Widget_Element extends \Elementor\Widget_Base
 	 */
 	protected function render() {
 
-		$settings = $this->get_settings_for_display();
-
-		$html = wp_oembed_get( $settings['url'] );
-
-		echo '<section id="timeline">';
-  
+		$settings = $this->get_settings_for_display();        
+        echo '<section id="timeline">';
+        foreach ( $settings[ 'gallery' ] as $image ) {
             echo '<div class="tl-item">';
                 
-                echo '<div class="tl-bg" style="background-image: url(\'' . $settings[ 'url' ] . '\')"></div>';
+                echo '<div class="tl-bg" style="background-image: url(\'' . $image[ 'url' ] . '\')"></div>';
                 
                 echo '<div class="tl-year">';
-                echo '<p class="f2 heading--sanSerif">2011</p>';
+                    echo '<p class="f2 heading--sanSerif">2011</p>';
                 echo '</div>';
 
                 echo '<div class="tl-content">';
-                echo '<h1>Lorem ipsum dolor sit</h1>';
-                echo '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit.</p>';
+                    echo '<h1>Lorem ipsum dolor sit</h1>';
+                    echo '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit.</p>';
                 echo '</div>';
 
             echo '</div>';
-
+        }
         echo '</section>';
-
-
-		echo '<div class="oembed-elementor-widget">';
-
-		echo ( $html ) ? $html : $settings['url'];
-
-		echo '</div>';
 
 	}
 
