@@ -128,15 +128,27 @@ class Beautiful_Elementor_Timeline_Widget_Element extends \Elementor\Widget_Base
 				'fields' => $repeater->get_controls(),
 				'default' => [
 					[
-						'list_title' => __( 'Title #1', 'beautiful-elementor-timeline-widget' ),
-						'list_content' => __( 'Item content. Click the edit button to change this text.', 'beautiful-elementor-timeline-widget' ),
+                        'betw_title' => __( 'Title #1', 'beautiful-elementor-timeline-widget' ),
+                        'betw_image' => 'https://placeimg.com/801/801/nature',
+						'betw_description' => __( 'Item content. Click the edit button to change this text.', 'beautiful-elementor-timeline-widget' ),
 					],
 					[
-						'list_title' => __( 'Title #2', 'beautiful-elementor-timeline-widget' ),
-						'list_content' => __( 'Item content. Click the edit button to change this text.', 'beautiful-elementor-timeline-widget' ),
-					],
+                        'betw_title' => __( 'Title #2', 'beautiful-elementor-timeline-widget' ),
+                        'betw_image' => 'https://placeimg.com/801/801/nature',
+						'betw_description' => __( 'Item content. Click the edit button to change this text.', 'beautiful-elementor-timeline-widget' ),
+                    ],
+                    [
+                        'betw_title' => __( 'Title #3', 'beautiful-elementor-timeline-widget' ),
+                        'betw_image' => 'https://placeimg.com/801/801/nature',
+						'betw_description' => __( 'Item content. Click the edit button to change this text.', 'beautiful-elementor-timeline-widget' ),
+                    ],
+                    [
+                        'betw_title' => __( 'Title #4', 'beautiful-elementor-timeline-widget' ),
+                        'betw_image' => 'https://placeimg.com/801/801/nature',
+						'betw_description' => __( 'Item content. Click the edit button to change this text.', 'beautiful-elementor-timeline-widget' ),
+					]
 				],
-				'title_field' => '{{{ list_title }}}',
+				'title_field' => '{{{ betw_title }}}',
 			]
 		);
 
@@ -156,18 +168,18 @@ class Beautiful_Elementor_Timeline_Widget_Element extends \Elementor\Widget_Base
 
 		$settings = $this->get_settings_for_display();        
         echo '<section id="timeline">';
-        foreach ( $settings[ 'gallery' ] as $image ) {
+        foreach ( $settings[ 'betw_list' ] as $item ) {
             echo '<div class="tl-item">';
                 
-                echo '<div class="tl-bg" style="background-image: url(\'' . $image[ 'url' ] . '\')"></div>';
+                echo '<div class="tl-bg" style="background-image: url(\'' . $item[ 'betw_image' ] . '\')"></div>';
                 
                 echo '<div class="tl-year">';
-                    echo '<p class="f2 heading--sanSerif" style="margin-block-end: 1em; margin-block-start: 1em">2011</p>';
+                    echo '<p class="f2 heading--sanSerif" style="margin-block-end: 1em; margin-block-start: 1em">' . $item[ 'betw_title' ] . '</p>';
                 echo '</div>';
 
                 echo '<div class="tl-content">';
                     echo '<h1>Lorem ipsum dolor sit</h1>';
-                    echo '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit.</p>';
+                    echo '<p>' . $item[ 'betw_description' ] . '</p>';
                 echo '</div>';
 
             echo '</div>';
