@@ -48,7 +48,7 @@ class Beautiful_Elementor_Timeline_Widget_Element extends \Elementor\Widget_Base
 	 * @return string Widget icon.
 	 */
 	public function get_icon() {
-		return 'fa fa-code';
+		return 'fa fa-list-ul';
 	}
 
 	/**
