@@ -90,7 +90,7 @@ class Beautiful_Elementor_Timeline_Widget_Element extends \Elementor\Widget_Base
 			[
 				'label' => __( 'Title', 'beautiful-elementor-timeline-widget' ),
 				'type' => \Elementor\Controls_Manager::TEXT,
-				'default' => __( 'Default title', 'beautiful-elementor-timeline-widget' ),
+				'default' => __( 'Title', 'beautiful-elementor-timeline-widget' ),
 				'placeholder' => __( 'Type your title here', 'beautiful-elementor-timeline-widget' ),
 			]
         );
@@ -100,7 +100,7 @@ class Beautiful_Elementor_Timeline_Widget_Element extends \Elementor\Widget_Base
 			[
 				'label' => __( 'Subtitle', 'beautiful-elementor-timeline-widget' ),
 				'type' => \Elementor\Controls_Manager::TEXT,
-				'default' => __( 'Default subtitle', 'beautiful-elementor-timeline-widget' ),
+				'default' => __( 'Subtitle', 'beautiful-elementor-timeline-widget' ),
 				'placeholder' => __( 'Type your subtitle here', 'beautiful-elementor-timeline-widget' ),
 			]
         );
