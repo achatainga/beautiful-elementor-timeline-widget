@@ -192,7 +192,7 @@ class Beautiful_Elementor_Timeline_Widget_Element extends \Elementor\Widget_Base
                 echo '</div>';
 
                 echo '<div class="tl-content">';
-                    echo '<h1>Lorem ipsum dolor sit</h1>';
+                    echo '<h1>' . $item[ 'betw_subtitle' ] . '</h1>';
                     echo '<p>' . $item[ 'betw_description' ] . '</p>';
                 echo '</div>';
 
