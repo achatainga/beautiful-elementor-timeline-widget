@@ -86,12 +86,6 @@ add_action( 'tgmpa_register', 'beautiful_elementor_timeline_widget_register_requ
 function beautiful_elementor_timeline_widget_register_required_plugins() {
 	$plugins = array(
 		array(
-			'name'        		=> 'SCSS-Library',
-			'slug'        		=> 'scss-library',
-			'required'			=> true,
-			'force_activation'	=> true
-		),
-		array(
 			'name'        	=> 'Elementor',
 			'slug'			=> 'elementor',
 			'required'		=> true
