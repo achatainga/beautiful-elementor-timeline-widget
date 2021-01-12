@@ -115,7 +115,7 @@ class Beautiful_Elementor_Timeline_Widget_Element extends \Elementor\Widget_Base
   
             echo '<div class="tl-item">';
                 
-                echo '<div class="tl-bg" style="background-image: url("' . $settings[ 'url' ] . '")"></div>';
+                echo '<div class="tl-bg" style="background-image: url(`' . $settings[ 'url' ] . '`)"></div>';
                 
                 echo '<div class="tl-year">';
                 echo '<p class="f2 heading--sanSerif">2011</p>';
