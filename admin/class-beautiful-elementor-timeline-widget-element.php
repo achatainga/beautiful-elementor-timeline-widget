@@ -191,7 +191,7 @@ class Beautiful_Elementor_Timeline_Widget_Element extends \Elementor\Widget_Base
 		$settings = $this->get_settings_for_display();        
         echo '<section id="timeline">';
         foreach ( $settings[ 'betw_list' ] as $item ) {
-            echo '<div class="tl-item">';
+            echo '<div class="tl-item" style="width: ' . 100 / count( $settings[ 'betw_list' ] ) . '%">';
                 
                 echo '<div class="tl-bg" style="background-image: url(\'' . $item[ 'betw_image' ][ 'url' ] . '\')"></div>';
                 
