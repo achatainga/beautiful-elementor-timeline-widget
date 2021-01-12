@@ -171,7 +171,7 @@ class Beautiful_Elementor_Timeline_Widget_Element extends \Elementor\Widget_Base
         foreach ( $settings[ 'betw_list' ] as $item ) {
             echo '<div class="tl-item">';
                 
-                echo '<div class="tl-bg" style="background-image: url(\'' . $item[ 'betw_image' ] . '\')"></div>';
+                echo '<div class="tl-bg" style="background-image: url(\'' . $item[ 'betw_image' ][ 'url' ] . '\')"></div>';
                 
                 echo '<div class="tl-year">';
                     echo '<p class="f2 heading--sanSerif" style="margin-block-end: 1em; margin-block-start: 1em">' . $item[ 'betw_title' ] . '</p>';
@@ -186,18 +186,5 @@ class Beautiful_Elementor_Timeline_Widget_Element extends \Elementor\Widget_Base
         }
         echo '</section>';
 
-	}
-
-    protected function _content_template() {
-		?>
-		<# if ( settings.betw_list.length ) { #>
-		<dl>
-			<# _.each( settings.betw_list, function( item ) { #>
-				<dt class="elementor-repeater-item-{{ item._id }}">{{{ item.betw_title }}}</dt>
-				<dd>{{{ item.betw_description }}}</dd>
-			<# }); #>
-			</dl>
-		<# } #>
-		<?php
 	}
 }
