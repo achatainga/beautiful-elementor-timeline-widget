@@ -106,6 +106,6 @@
 
 	* {
 		transition-delay: 0s !important;
-		transition-duration: 5s !important;
+		transition-duration: 0.5s !important;
 	}
 }
