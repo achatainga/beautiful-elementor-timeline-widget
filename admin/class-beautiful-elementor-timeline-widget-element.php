@@ -81,14 +81,62 @@ class Beautiful_Elementor_Timeline_Widget_Element extends \Elementor\Widget_Base
 				'label' => __( 'Content', 'plugin-name' ),
 				'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
 			]
-		);
+        );
+        
+        $repeater = new \Elementor\Repeater();
 
-		$this->add_control(
-			'gallery',
+        $repeater->add_control(
+			'betw_title',
 			[
-				'label' => __( 'Add 4 images', 'plugin-name' ),
-				'type' => \Elementor\Controls_Manager::GALLERY,
-                'default' => [],
+				'label' => __( 'Title', 'beautiful-elementor-timeline-widget' ),
+				'type' => \Elementor\Controls_Manager::TEXT,
+				'default' => __( 'Default title', 'beautiful-elementor-timeline-widget' ),
+				'placeholder' => __( 'Type your title here', 'beautiful-elementor-timeline-widget' ),
+			]
+        );
+        
+        $repeater->add_control(
+			'betw_image',
+			[
+				'label' => __( 'Choose Image', 'beautiful-elementor-timeline-widget' ),
+				'type' => \Elementor\Controls_Manager::MEDIA,
+				'default' => [
+					'url' => \Elementor\Utils::get_placeholder_image_src(),
+				],
+			]
+        );
+
+        $repeater->add_control(
+			'betw_description',
+			[
+				'label' => __( 'Description', 'beautiful-elementor-timeline-widget' ),
+				'type' => \Elementor\Controls_Manager::TEXTAREA,
+				'rows' => 10,
+                'default' => __(
+                    'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit.',
+                    'beautiful-elementor-timeline-widget'
+                ),
+				'placeholder' => __( 'Type your description here', 'beautiful-elementor-timeline-widget' ),
+			]
+        );
+        
+        $this->add_control(
+			'betw_list',
+			[
+				'label' => __( 'Timeline Item', 'beautiful-elementor-timeline-widget' ),
+				'type' => \Elementor\Controls_Manager::REPEATER,
+				'fields' => $repeater->get_controls(),
+				'default' => [
+					[
+						'list_title' => __( 'Title #1', 'beautiful-elementor-timeline-widget' ),
+						'list_content' => __( 'Item content. Click the edit button to change this text.', 'beautiful-elementor-timeline-widget' ),
+					],
+					[
+						'list_title' => __( 'Title #2', 'beautiful-elementor-timeline-widget' ),
+						'list_content' => __( 'Item content. Click the edit button to change this text.', 'beautiful-elementor-timeline-widget' ),
+					],
+				],
+				'title_field' => '{{{ list_title }}}',
 			]
 		);
 
@@ -128,4 +176,16 @@ class Beautiful_Elementor_Timeline_Widget_Element extends \Elementor\Widget_Base
 
 	}
 
+    protected function _content_template() {
+		?>
+		<# if ( settings.list.length ) { #>
+		<dl>
+			<# _.each( settings.list, function( item ) { #>
+				<dt class="elementor-repeater-item-{{ item._id }}">{{{ item.list_title }}}</dt>
+				<dd>{{{ item.list_content }}}</dd>
+			<# }); #>
+			</dl>
+		<# } #>
+		<?php
+	}
 }
