@@ -190,11 +190,11 @@ class Beautiful_Elementor_Timeline_Widget_Element extends \Elementor\Widget_Base
 
     protected function _content_template() {
 		?>
-		<# if ( settings.list.length ) { #>
+		<# if ( settings.betw_list.length ) { #>
 		<dl>
-			<# _.each( settings.list, function( item ) { #>
-				<dt class="elementor-repeater-item-{{ item._id }}">{{{ item.list_title }}}</dt>
-				<dd>{{{ item.list_content }}}</dd>
+			<# _.each( settings.betw_list, function( item ) { #>
+				<dt class="elementor-repeater-item-{{ item._id }}">{{{ item.betw_title }}}</dt>
+				<dd>{{{ item.betw_description }}}</dd>
 			<# }); #>
 			</dl>
 		<# } #>
