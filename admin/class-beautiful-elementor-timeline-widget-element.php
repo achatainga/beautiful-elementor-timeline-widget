@@ -140,21 +140,33 @@ class Beautiful_Elementor_Timeline_Widget_Element extends \Elementor\Widget_Base
 					[
                         'betw_title' => __( 'Title #1', 'beautiful-elementor-timeline-widget' ),
                         'betw_subtitle' => __( 'Subtitle #1' ),
+                        'betw_image' => [
+                            'url' => \Elementor\Utils::get_placeholder_image_src(),
+                        ],
 						'betw_description' => __( 'Item content. Click the edit button to change this text.', 'beautiful-elementor-timeline-widget' ),
 					],
 					[
                         'betw_title' => __( 'Title #2', 'beautiful-elementor-timeline-widget' ),
                         'betw_subtitle' => __( 'Subtitle #2' ),
+                        'betw_image' => [
+                            'url' => \Elementor\Utils::get_placeholder_image_src(),
+                        ],
 						'betw_description' => __( 'Item content. Click the edit button to change this text.', 'beautiful-elementor-timeline-widget' ),
                     ],
                     [
                         'betw_title' => __( 'Title #3', 'beautiful-elementor-timeline-widget' ),
                         'betw_subtitle' => __( 'Subtitle #3' ),
+                        'betw_image' => [
+                            'url' => \Elementor\Utils::get_placeholder_image_src(),
+                        ],
 						'betw_description' => __( 'Item content. Click the edit button to change this text.', 'beautiful-elementor-timeline-widget' ),
                     ],
                     [
                         'betw_title' => __( 'Title #4', 'beautiful-elementor-timeline-widget' ),
                         'betw_subtitle' => __( 'Subtitle #4' ),
+                        'betw_image' => [
+                            'url' => \Elementor\Utils::get_placeholder_image_src(),
+                        ],
 						'betw_description' => __( 'Item content. Click the edit button to change this text.', 'beautiful-elementor-timeline-widget' ),
 					]
 				],
